@@ -71,10 +71,16 @@ areaCodes.get( '+1-303-123-4567', function( err, data ) {
 */
 
 ```
-
-Get entire DB:
-
+Lookup by area code only:
+```javascript
+let AreaCodes = require( 'areacodes' );
+let areaCodes = new AreaCodes();
+areaCodes.getByAreaCode('307', (err, data) => {
+  console.error(data)
+})
 ```
+Get entire DB:
+```javascript
 let AreaCodes = require( 'areacodes' );
 
 let areaCodes = new AreaCodes();
